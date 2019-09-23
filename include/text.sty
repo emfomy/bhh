@@ -1,0 +1,34 @@
+% Item Name
+\makeatletter
+\newcommand{\ItemName}{\@ifstar{\@ItemNameStar}{\@ItemNameNoStar}}
+\newcommand{\@ItemNameStar}[1]{\ref*{item:#1}}
+\newcommand{\@ItemNameNoStar}[1]{〈\ref*{item:#1}~#1〉}
+\makeatother
+
+% Omen Name
+\makeatletter
+\newcommand{\OmenName}{\@ifstar{\@OmenNameStar}{\@OmenNameNoStar}}
+\newcommand{\@OmenNameStar}[1]{\ref*{omen:#1}}
+\newcommand{\@OmenNameNoStar}[1]{〈\ref*{omen:#1}~#1〉}
+\makeatother
+
+% BossName
+\makeatletter
+\newcommand{\BossName}{\@ifstar{\@BossNameStar}{\@BossNameNoStar}}
+\newcommand{\@BossNameStar}[1]{\ref*{boss:#1}}
+\newcommand{\@BossNameNoStar}[1]{〈\ref*{boss:#1}~#1〉標記}
+\makeatother
+
+% MonsterName
+\makeatletter
+\newcommand{\MonsterName}{\@ifstar{\@MonsterNameStar}{\@MonsterNameNoStar}}
+\newcommand{\@MonsterNameStar}[1]{\ref*{monster:#1}}
+\newcommand{\@MonsterNameNoStar}[1]{〈\ref*{monster:#1}〉標記}
+\makeatother
+
+% TokenName
+\makeatletter
+\newcommand{\TokenName}{\@ifstar{\@TokenNameStar}{\@TokenNameNoStar}}
+\newcommand{\@TokenNameStar}[1]{\ref*{token:#1}}
+\newcommand{\@TokenNameNoStar}[1]{〈\ref*{token:#1}~#1〉標記}
+\makeatother
