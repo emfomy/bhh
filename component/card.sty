@@ -2,29 +2,29 @@
 
 % 10.5cm x 5.45cm
 
-% \setlength{\fboxrule}{0pt}
-\setlength{\fboxrule}{0.1pt}
+\setlength{\fboxrule}{0pt}
 \setlength{\fboxsep}{1.25em}
 
 % Card
 \newsavebox{\mybox}
-\newenvironment{BHHCard}[3]{%
-  \def\imgcmd{\includegraphics[width=5.45cm]{#3}}
+\newenvironment{BHHCard}[4]{%
+  \def\imgcmd{\includegraphics[width=5.45cm]{img/#4_background.png}}%
   \begin{lrbox}{\mybox}%
-    \begin{minipage}[t][\dimexpr10.5cm-\fboxsep-\fboxsep\relax]{\dimexpr5.45cm-\fboxsep-\fboxsep\relax}%
+    \begin{minipage}[t][\dimexpr10.5cm-2\fboxsep-2\fboxrule\relax]{\dimexpr5.45cm-2\fboxsep-2\fboxrule\relax}%
+      ~\par%
       { \centering%
         {\FontTitle \LARGE #1} \par%
         {\FontSubTitle \small \textcolor{milk-dark}{\uppercase{#2}}} \par%
       }%
       \vspace*{0.5em}%
-      \small
+      \small%
 }{%
     \end{minipage}%
   \end{lrbox}%
   %
   \sbox\mybox{\fbox{\usebox\mybox}}%
   \mbox{%
-    \rlap{\raisebox{-\dp\mybox}{\imgcmd}}%
+    \rlap{\raisebox{\dimexpr-\dp\mybox}{\imgcmd}}%
     \usebox\mybox%
   }%
 }
@@ -38,24 +38,24 @@
 }
 
 % Event Card
-\newenvironment{EventCard}[2]{%
-  \begin{BHHCard}{#2}{#1}{img/event_background.png}%
+\newenvironment{EventCard}[3]{%
+  \begin{BHHCard}{#3}{#2}{#1}{event}%
 }{%
   \end{BHHCard}%
 }
 
 % Item Card
-\newenvironment{ItemCard}[1]{%
-  \def\ThisName{\ItemBrief{#1}}
-  \begin{BHHCard}{\This}{#1}{img/item_background.png}%
+\newenvironment{ItemCard}[2]{%
+  \def\ThisName{\ItemBrief{#2}}
+  \begin{BHHCard}{\ThisName}{#2}{#1}{item}%
 }{%
   \end{BHHCard}%
 }
 
 % Omen Card
-\newenvironment{OmenCard}[1]{%
-  \def\ThisName{\OmenBrief{#1}}
-  \begin{BHHCard}{\This}{#1}{img/omen_background.png}%
+\newenvironment{OmenCard}[2]{%
+  \def\ThisName{\OmenBrief{#2}}
+  \begin{BHHCard}{\ThisName}{#2}{#1}{omen}%
 }{%
   \end{BHHCard}%
 }
