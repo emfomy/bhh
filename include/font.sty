@@ -1,34 +1,26 @@
+\RequirePackage{xcolor}
 \RequirePackage{fontspec}
-
-\setmainfont{Baskerville}[SmallCapsFont={* Small Caps SSi}]
-\setsansfont{Helvetica Neue}
-\setmonofont[Scale=0.83]{Consolas}
-
 \RequirePackage{xeCJK}
 
-\setCJKmainfont{Kaiti TC}[
-  UprightFont        = {* Regular},
-  BoldFont           = {* Black},
-  ItalicFont         = {* Regular},
-  BoldItalicFont     = {* Black},
-  ItalicFeatures     = {FakeSlant=0.2},
-  BoldItalicFeatures = {FakeSlant=0.2},
-]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\setCJKsansfont{Heiti TC}[
-  UprightFont        = {* Light},
-  BoldFont           = {* Medium},
-  ItalicFont         = {* Light},
-  BoldItalicFont     = {* Medium},
-  ItalicFeatures     = {FakeSlant=0.2},
-  BoldItalicFeatures = {FakeSlant=0.2},
-]
+\definecolor{milk-light}{HTML}{f1f0eb}
+\definecolor{milk}{HTML}{dcd9cd}
+\definecolor{milk-deep}{HTML}{c7c2af}
+\definecolor{milk-dark}{HTML}{9d9573}
 
-\setCJKsansfont{Yuanti TC}[
-  UprightFont        = {* Light},
-  BoldFont           = {* Bold},
-  ItalicFont         = {* Light},
-  BoldItalicFont     = {* Bold},
-  ItalicFeatures     = {FakeSlant=0.2},
-  BoldItalicFeatures = {FakeSlant=0.2},
-]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setmainfont[AutoFakeBold,AutoFakeSlant]{Libian TC Regular}
+\setCJKmainfont[AutoFakeBold,AutoFakeSlant]{Libian TC Regular}
+
+\setCJKfamilyfont{title}{Weibei TC Bold}
+\newcommand*\FontTitle{\CJKfamily+{title}}
+
+\newfontfamily\FontSubTitle{Chalkduster}
+
+\setCJKfamilyfont{story}{Xingkai TC Bold}
+\newcommand*\FontStory{\CJKfamily+{story}}
+
+\setCJKfamilyfont{script}{HanziPen TC Regular}
+\newcommand*\FontScript{\CJKfamily+{script}}

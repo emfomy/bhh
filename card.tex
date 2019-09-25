@@ -1,28 +1,29 @@
 %!TEX program = xelatex
 
-\documentclass[12pt, a4paper]{article}
+\documentclass[10pt, a4paper]{article}
 
-\usepackage[linktocpage=true, colorlinks=true, linkcolor=blue]{hyperref}
-\usepackage[nameinlink]{cleveref}
-
+% \usepackage[linktocpage=true, colorlinks=true, linkcolor=blue]{hyperref}
+% \usepackage[nameinlink]{cleveref}
 \usepackage{fullpage}
+\usepackage{enumitem}
 
 \usepackage{bhh}
+\usepackage{component/card}
 
 \setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist{leftmargin=2em,font=\bfseries}
 
 \title{BHH - Card}
 
 \begin{document}
 
-\newpage
+\input{src/card/bhh/event}
+% \input{src/card/bhh/item}
+% \input{src/card/bhh/omen}
 
-\input{card/bhh/event}
-\input{card/bhh/item}
-\input{card/bhh/omen}
-
-\input{card/bww/event}
-\input{card/bww/item}
-\input{card/bww/omen}
+% \input{src/card/bww/event}
+% \input{src/card/bww/item}
+% \input{src/card/bww/omen}
 
 \end{document}

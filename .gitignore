@@ -1,4 +1,6 @@
 # Other
+activate.fish
+tmp/*
 .tmp/*
 
 ## Core latex/pdflatex auxiliary files:

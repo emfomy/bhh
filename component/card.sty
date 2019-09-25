@@ -1,0 +1,61 @@
+\RequirePackage{graphicx}
+
+% 10.5cm x 5.45cm
+
+% \setlength{\fboxrule}{0pt}
+\setlength{\fboxrule}{0.1pt}
+\setlength{\fboxsep}{1.25em}
+
+% Card
+\newsavebox{\mybox}
+\newenvironment{BHHCard}[3]{%
+  \def\imgcmd{\includegraphics[width=5.45cm]{#3}}
+  \begin{lrbox}{\mybox}%
+    \begin{minipage}[t][\dimexpr10.5cm-\fboxsep-\fboxsep\relax]{\dimexpr5.45cm-\fboxsep-\fboxsep\relax}%
+      { \centering%
+        {\FontTitle \LARGE #1} \par%
+        {\FontSubTitle \small \textcolor{milk-dark}{\uppercase{#2}}} \par%
+      }%
+      \vspace*{0.5em}%
+      \small
+}{%
+    \end{minipage}%
+  \end{lrbox}%
+  %
+  \sbox\mybox{\fbox{\usebox\mybox}}%
+  \mbox{%
+    \rlap{\raisebox{-\dp\mybox}{\imgcmd}}%
+    \usebox\mybox%
+  }%
+}
+
+% Card Story
+\newenvironment{CardStory}{%
+  \centering \FontStory \footnotesize%
+}{%
+  \par\vspace*{-0.5em}%
+  \hfil{\textcolor{milk-dark}{\rule{\textwidth}{0.4pt}}}\hfil%
+}
+
+% Event Card
+\newenvironment{EventCard}[2]{%
+  \begin{BHHCard}{#2}{#1}{img/event_background.png}%
+}{%
+  \end{BHHCard}%
+}
+
+% Item Card
+\newenvironment{ItemCard}[1]{%
+  \def\ThisName{\ItemBrief{#1}}
+  \begin{BHHCard}{\This}{#1}{img/item_background.png}%
+}{%
+  \end{BHHCard}%
+}
+
+% Omen Card
+\newenvironment{OmenCard}[1]{%
+  \def\ThisName{\OmenBrief{#1}}
+  \begin{BHHCard}{\This}{#1}{img/omen_background.png}%
+}{%
+  \end{BHHCard}%
+}
