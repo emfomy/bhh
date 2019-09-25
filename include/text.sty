@@ -1,34 +1,33 @@
-% Item Name
-\makeatletter
-\newcommand{\ItemName}{\@ifstar{\@ItemNameStar}{\@ItemNameNoStar}}
-\newcommand{\@ItemNameStar}[1]{\ref*{item:#1}}
-\newcommand{\@ItemNameNoStar}[1]{〈\ref*{item:#1}~#1〉}
-\makeatother
+% Room
+\newcommand{\Room}[1]{〈\ref{room:#1}~#1〉}
+\newcommand{\RoomBrief}[1]{\ref{room:#1}}
 
-% Omen Name
-\makeatletter
-\newcommand{\OmenName}{\@ifstar{\@OmenNameStar}{\@OmenNameNoStar}}
-\newcommand{\@OmenNameStar}[1]{\ref*{omen:#1}}
-\newcommand{\@OmenNameNoStar}[1]{〈\ref*{omen:#1}~#1〉}
-\makeatother
+% Item
+\newcommand{\Item}[1]{〈\ref{item:#1}~#1〉}
+\newcommand{\ItemBrief}[1]{\ref{item:#1}}
 
-% BossName
-\makeatletter
-\newcommand{\BossName}{\@ifstar{\@BossNameStar}{\@BossNameNoStar}}
-\newcommand{\@BossNameStar}[1]{\ref*{boss:#1}}
-\newcommand{\@BossNameNoStar}[1]{〈\ref*{boss:#1}~#1〉標記}
-\makeatother
+% Omen
+\newcommand{\Omen}[1]{〈\ref{omen:#1}~#1〉}
+\newcommand{\OmenBrief}[1]{\ref{omen:#1}}
 
-% MonsterName
-\makeatletter
-\newcommand{\MonsterName}{\@ifstar{\@MonsterNameStar}{\@MonsterNameNoStar}}
-\newcommand{\@MonsterNameStar}[1]{\ref*{monster:#1}}
-\newcommand{\@MonsterNameNoStar}[1]{〈\ref*{monster:#1}〉標記}
-\makeatother
+% Boss
+\newcommand{\Boss}[1]{〈\ref{boss:#1}~#1〉標記}
+\newcommand{\BossBrief}[1]{\ref{boss:#1}}
 
-% TokenName
-\makeatletter
-\newcommand{\TokenName}{\@ifstar{\@TokenNameStar}{\@TokenNameNoStar}}
-\newcommand{\@TokenNameStar}[1]{\ref*{token:#1}}
-\newcommand{\@TokenNameNoStar}[1]{〈\ref*{token:#1}~#1〉標記}
-\makeatother
+% Monster
+\newcommand{\Monster}[1]{〈\ref{monster:#1}〉標記}
+\newcommand{\MonsterBrief}[1]{\ref{monster:#1}}
+
+% Token
+\newcommand{\TokenSq}[1]{〈\ref{token-sq:#1}~#1〉方形標記}
+\newcommand{\TokenSqBrief}[1]{〈\ref{token-sq:#1}~#1〉標記}
+
+\newcommand{\TokenTri}[1]{〈\ref{token-tri:#1}~#1〉三角標記}
+\newcommand{\TokenTriBrief}[1]{〈\ref{token-tri:#1}~#1〉標記}
+
+\newcommand{\TokenPenta}[1]{〈\ref{token-penta:#1}~#1〉五角標記}
+\newcommand{\TokenPentaBrief}[1]{〈\ref{token-penta:#1}~#1〉標記}
+
+% Roll
+\newcommand{\Roll}[1]{\ref{roll:#1}檢定}
+\newcommand{\RollBrief}[1]{\ref{roll:#1}}
