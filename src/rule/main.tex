@@ -1,0 +1,92 @@
+%!TEX root = ../../rule.tex
+
+\section{主要規則} \label{sec:main}
+遊戲從起始玩家開始，並向左順時針進行，探險者輪流進行回合並探索屋子。\par
+為了簡單起見，所有規則中的「你」皆指正在進行動作或受到卡牌、房屋板塊規則影響的角色——探險者（包含英雄與叛徒）以及怪物。
+
+\subsection{屬性／檢定}
+每位探險者皆有四個\textbf{〈屬性 Trait〉}，由角色卡四邊的四排數字所表示：\textbf{〈力量 Might〉}、\textbf{〈速度 Speed〉}、\textbf{〈知識 Knowledge〉}、\textbf{〈神志 Sanity〉}。力量與速度為\textbf{〈物理 Physical〉}屬性，而知識與神志為\textbf{〈精神 Mental〉}屬性。\par
+許多卡片、房間板塊、以及遊戲效果會影響你的屬性。當任何效果提升或降低你的任一屬性時，將該屬性的指標滑動相對應的格數。舉例來說，Zoe Ingstrom 的初始力量為３，若有個效果提升她３點力量時，將她的力量指標往數字大的那側滑動，指到４的位置。\par
+每個屬性皆有其最大值，也就是角色卡上該屬性那排數字的最大值。當屬性受到效果影響而提升時，無法超過其最大值。\par
+另外，每個屬性的最小值下方皆有一個\textbf{〈骷髏頭 Skull〉}標誌。在作祟發生後，當你的任一屬性將至骷髏頭標誌時，你的探險者就會死亡。在作祟發生前，沒有人會死亡——換言之，任何屬性皆不會將至骷髏頭標誌。當屬性受到效果影響而降低到或超過骷髏頭標誌時，改為停在該屬性的最小值。舉例來說，Zoe Ingstrom 的初始神志為５，若有個效果降低她２點神志時，將她的神志指標往骷髏頭的那側滑動，指到３的位置。若她再失去２點神志，除非作祟尚未發生，否則她將會死亡。\par
+\textbf{〈傷害 Damage〉}：許多卡片、房間板塊、以及遊戲效果會對你造成傷害。當你受到\textbf{〈物理傷害 Physical Damage〉}時，你可將該傷害自由分配到力量和速度，並對兩個屬性下降總和為該傷害的格數。同樣地，當你受到\textbf{〈精神傷害 Mental Damage〉}時，如同物理傷害的操作，但改為下降知識和神志。\par
+\emph{附註：Zoe Ingstrom 的力量由大到小分別為「７、６、４、４、\textcolor{teal}{『３』}、３、２、２、骷髏」，神志為「８、７、６、６、５、\textcolor{teal}{『５』}、４、３、骷髏」，其中『』為起始值。}
+
+\subsection{回合進行}
+在你的回合當中，你可以以任意順序進行以下動作（任意次數）：\par
+\begin{itemize}
+  \item \textbf{移動}，
+  \item \textbf{探索新房間}，
+  \item \textbf{使用物品}（道具卡與預兆卡），
+  \item \textbf{執行擲骰}，
+  \item \textbf{發動攻擊}（一回合一次，僅能在作祟發生後執行）。
+\end{itemize}
+在作祟發生前，若你抽到預兆卡，你必須回合結束時進行\textbf{〈作祟檢定 Haunt Roll〉}。作祟發生後，遊戲將會有些許的改變。（詳見\namepageref{sec:haunt}）
+
+\subsection{移動}
+
+在你的回合中，你可以移動至多等於探險者的\textbf{速度}的距離。在移動中，你進行任何行動（如使用物品或發動攻擊）。然而，當你因為任何理由而抽牌後，你本回合必須停止移動（但仍然可以繼續進行回合）。
+
+\subsection{探索新房間}
+當你的探險者穿越一扇後面沒有房間的門時，檢查房間板塊堆最頂上的房間。如果它符合你在的樓層（\textbf{〈地面 Ground〉、〈地下 Basement〉、〈樓上 Upper〉}），將它翻開並連接在門後，然後移動至房間內，並探索房間。\par
+放置時必須盡量合理化，門口必須對著門口，而如果無法對應所有的門的話，則造成了一些「假象」，例如被鎖死的門或是被釘死的窗戶。（這對於一間作祟的房屋而言，並不是什麼奇怪的事。）你不可以穿越鎖死的門，釘死的窗也不被算盡窗戶裡面（除非作祟劇情中特別規定）。\par
+如果房間板塊頂的房間不符合你在的樓層，將它維持面向下的狀態放至棄牌堆。重複檢查房間板塊頂的房間直到找到符合的房間為止。\par
+你可以穿越門並移動到相鄰的房間。所有門都是開著的，唯一的例外是\Room{Front Door}，這扇門永遠都是鎖著的。你無法離開這個幢房屋或使用\Room{Front Door}（除非作祟劇情中特別規定）。所有室外的房間（如\Room{Patio}）亦屬於房屋的一部分。\par
+樓層間透過樓梯相連。\Room{Grand Staircase}永遠都連到\Room{Upper Landing}；\Room{Stairs from Basement}永遠都連到\Room{Foyer}的秘門，但這扇秘門在\Room{Stairs from Basement}被探索前皆不可使用。\par
+有些房間有特殊符號，代表預兆卡、物品卡、事件卡（詳見\namepageref{ssec:draw}）。有些房間也會有文字敘述，這些文字會在探險者進入或離開房間時發動。如果房間同時有文字與符號，先為特殊符號抽牌，再執行文字敘述的內容。\par
+有些房間會影響移動，另外許多房間有特別的規則（詳見\namepageref{ssec:special-room}）。
+
+\begin{RuleBox}{我可以透過擺放新房間封鎖一個樓層嗎？}%
+  你無法用此方法封鎖樓層，換言之，你無法使一個樓層沒有任何未探索的門。如果所有合理的擺放皆會封鎖該樓層，棄掉該房間板塊並抽取新的直到一間不會封鎖樓層的房間為止。如果所有剩餘的房間皆會封鎖該樓層，則玩家可在最少改動下改變其他房間 的放置（例如改變方向、移往隔壁或交換位置）。\par
+  \Room{Mystic Elevator}的移動也可能會封鎖樓層。如果\Room{Mystic Elevator}的檢定結果會導致樓層被封鎖，則電梯不會移動（就算之後可以移開電梯也不行）。
+\end{RuleBox}
+
+\begin{RuleBox}{房間板塊堆用完了怎麼辦？}%
+  如果你用完了房間板塊堆，將棄牌堆洗勻，並用這些牌當作新的房間板塊堆。如果你用光了一層樓的所有房間板塊，則無法繼續在該層樓探索新房間——你已經找到所有房間了。
+\end{RuleBox}
+
+\subsection{特殊房間} \label{ssec:special-room}
+有些房間板塊上印有規則敘述房間的效果，本章節會介紹大多數這類房間的特別規則以及介紹。這些特別的房間在房間名字上會多加一個星號(*)。
+
+\begin{RuleBox}{\Room{Chasm}、\Room{Catacombs}、\Room{Vault}、\Room{Tower}}%
+  這些房間被稱為\textbf{〈屏障房間 Barrier Room〉}。屏障房間被屏障分為兩側，並且會阻擋你從一側移動到另一側。欲穿過屏障，必須進行房間板塊上寫的\textbf{\Roll{Trait}}（力量、速度、知識、神志）。每回合可執行一次這個檢定。穿過屏障不需花費行動點數。若檢定失敗，你本回合必須停止移動。你下回合仍可重新嘗試此檢定，亦可選擇回頭離開。\par
+  探險者無法與屏障對面的其他探險者戰鬥或互動。怪物永遠忽視屏障，但若怪物結束移動於屏障房間時，其操控者必須決定牠要待在哪一側。\par
+  若任何效果使你落入屏障房間時，你必須決定要落入哪一側。若任何效果要求你放置方形標記在此房（像是\Room{Collapsed Room}或\Event{Secret Passage}），則該標記將永久放置於你選擇的那側。
+\end{RuleBox}
+
+\begin{RuleBox}{\Room{Entrance Hall}、\Room{Foyer}、\Room{Grand Staircase}}%
+  \Room{Entrance Hall}、\Room{Foyer}、\Room{Grand Staircase}在同一個板塊上，但是他們被視為三間分開的房間，從其中一間房間移動至相鄰房間亦需花費１點行動點數。\Room{Grand Staircase}與\Room{Upper Landing}視為兩間分開的房間。
+\end{RuleBox}
+
+\begin{RuleBox}{\Room{Coal Chute}}%
+  當你進這間房間，立即滑落至\Room{Basement Landing}。滑落不需花費行動點數。角色無法結束回合於\RoomBrief{Coal Chute}。
+\end{RuleBox}
+
+\begin{RuleBox}{\Room{Collapsed Room}}%
+  只有發現這間房間的探險者需執行板塊上印的速度檢定。此後，任何進入此房的探險者忽視房間的效果，並且可以選擇跳進坑洞裡。落至地下不需花費行動點數，但探險者須受到傷害。\par
+  第一個落至地下的探險者需抽取一張地下的房間板塊（若已無未探索的地下房間，則任選一間），跌落至該處，並放置一枚\TokenSq{Below Collapsed Room}於探險者落入的房間中。\par
+  若第一個落入地下的角色為怪物，則無須抽新的房間板塊，直接選擇一間以探索的地下房間。
+\end{RuleBox}
+
+\begin{RuleBox}{\Room{Junk Room}}%
+  若你在離開此房間時失去了速度屬性，且你的新速度使你沒有足夠的移動點數離開此房，你依然可以離開此房，並停留在\RoomBrief{Junk Room}與相鄰的房間內。
+\end{RuleBox}
+
+\begin{RuleBox}{\Room{Mystic Elevator}}%
+  這個板塊會在你進入時立即移動。擲２顆骰子並把此板塊放置於相對應樓層並連接一扇門。如果檢定結果會導致樓層被封鎖，則電梯不會移動（就算之後可以移開電梯也不行）。若檢定結果為\RoomBrief{Mystic Elevator}所在的樓層，依然可以移動電梯至同樓層的其他門。你一回合僅可使用\RoomBrief{Mystic Elevator}一次。\par
+  叛徒與怪物皆可使用\RoomBrief{Mystic Elevator}，並可無需檢定自由決定要移動至哪個樓層。然而，整個叛徒＋怪物回合階段僅能使用一次電梯，並且電梯會於第一次有叛徒或怪物進入時立即移動。換言之，若叛徒在他的回合使用過\RoomBrief{Mystic Elevator}，則接下來的怪物回合電梯將不再移動。若英雄花費其整個回合於\RoomBrief{Mystic Elevator}中並沒有移動，則他必須於回合結束時擲骰移動電梯。\par
+  如果有多名探險者在\RoomBrief{Mystic Elevator}內，而其中一位在移動電梯時骰到０，則所有探險者必須承受傷害。\par
+  若有任何效果可通往\RoomBrief{Mystic Elevator}（像是\Room{Collapsed Room}或\Event{Secret Passage}），該效果放置的標記將跟隨著電梯一同移動。
+\end{RuleBox}
+
+\begin{RuleBox}{\Room{Vault}}%
+  若任何效果使你落入此房（像是\Room{Collapsed Room}或\Event{Secret Passage}），你只能落入\RoomBrief{Vault}門鎖的外側。當\RoomBrief{Vault}被打開時，放置一枚\TokenSq{Vault Empty}於此房。叛徒仍然需要進行知識檢定來開啟\RoomBrief{Vault}。
+\end{RuleBox}
+
+\subsection{抽牌} \label{ssec:draw}
+
+\subsection{使用道具＆預兆}
+
+\subsection{擲骰判定}
+
+\subsection{發動攻擊}

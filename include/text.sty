@@ -1,41 +1,43 @@
+\RequirePackage{nameref}
+
 % Room
-\newcommand{\Room}[1]{〈\ref{room:#1}~#1〉}
-\newcommand{\RoomBrief}[1]{\ref{room:#1}}
+\newcommand{\Room}[1]{〈\ref{room:#1}{}~#1〉}
+\newcommand{\RoomBrief}[1]{\ref{room:#1}{}}
 
 % Event
-\newcommand{\Event}[1]{〈\ref{event:#1}~#1〉}
-\newcommand{\EventBrief}[1]{\ref{event:#1}}
+\newcommand{\Event}[1]{〈\ref{event:#1}{}~#1〉}
+\newcommand{\EventBrief}[1]{\ref{event:#1}{}}
 
 % Item
-\newcommand{\Item}[1]{〈\ref{item:#1}~#1〉}
-\newcommand{\ItemBrief}[1]{\ref{item:#1}}
+\newcommand{\Item}[1]{〈\ref{item:#1}{}~#1〉}
+\newcommand{\ItemBrief}[1]{\ref{item:#1}{}}
 
 % Omen
-\newcommand{\Omen}[1]{〈\ref{omen:#1}~#1〉}
-\newcommand{\OmenBrief}[1]{\ref{omen:#1}}
+\newcommand{\Omen}[1]{〈\ref{omen:#1}{}~#1〉}
+\newcommand{\OmenBrief}[1]{\ref{omen:#1}{}}
 
 % Boss
-\newcommand{\Boss}[1]{〈\ref{boss:#1}~#1〉標記}
-\newcommand{\BossBrief}[1]{\ref{boss:#1}}
+\newcommand{\Boss}[1]{〈\ref{boss:#1}{}~#1〉標記}
+\newcommand{\BossBrief}[1]{\ref{boss:#1}{}}
 
 % Monster
-\newcommand{\Monster}[1]{〈\ref{monster:#1}〉標記}
-\newcommand{\MonsterBrief}[1]{\ref{monster:#1}}
+\newcommand{\Monster}[1]{〈\ref{monster:#1}{}〉標記}
+\newcommand{\MonsterBrief}[1]{\ref{monster:#1}{}}
 
 % Token
-\newcommand{\TokenSq}[1]{〈\ref{token-sq:#1}~#1〉方形標記}
-\newcommand{\TokenSqBrief}[1]{\ref{token-sq:#1}}
+\newcommand{\TokenSq}[1]{〈\ref{token-sq:#1}{}~#1〉方形標記}
+\newcommand{\TokenSqBrief}[1]{\ref{token-sq:#1}{}}
 
-\newcommand{\TokenTri}[1]{〈\ref{token-tri:#1}~#1〉三角標記}
-\newcommand{\TokenTriBrief}[1]{\ref{token-tri:#1}}
+\newcommand{\TokenTri}[1]{〈\ref{token-tri:#1}{}~#1〉三角標記}
+\newcommand{\TokenTriBrief}[1]{\ref{token-tri:#1}{}}
 
-\newcommand{\TokenPenta}[1]{〈\ref{token-penta:#1}~#1〉五角標記}
-\newcommand{\TokenPentaBrief}[1]{\ref{token-penta:#1}}
+\newcommand{\TokenPenta}[1]{〈\ref{token-penta:#1}{}~#1〉五角標記}
+\newcommand{\TokenPentaBrief}[1]{\ref{token-penta:#1}{}}
 
 % Roll
-\newcommand{\Roll}[1]{\ref{roll:#1}檢定}
-\newcommand{\RollBrief}[1]{\ref{roll:#1}}
+\newcommand{\Roll}[1]{\ref{roll:#1}{}檢定}
+\newcommand{\RollBrief}[1]{\ref{roll:#1}{}}
 \newcommand{\RollAny}{擲骰}
 
 % Usage
-\newcommand{\Usage}[1]{\ref{usage:#1}}
+\newcommand{\Usage}[1]{\ref{usage:#1}{}}
