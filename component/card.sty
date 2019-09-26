@@ -8,7 +8,7 @@
 % Card
 \newsavebox{\mybox}
 \newenvironment{BHHCard}[6]{%
-  \def\bgcmd{\includegraphics[width=5.45cm, angle=180, origin=c]{img/#3_background.png}}%
+  \def\bgcmd{\includegraphics[width=5.45cm]{img/#3_background.png}}%
   \def\iconcmd{\includegraphics[height=0.5cm]{img/#3_icon.png}}%
   \def\seriescmd{\includegraphics[width=1em]{img/#4.png}}%
   \def\usagecmd{\Usage{#5}}%
@@ -48,7 +48,13 @@
 }
 
 % Event Card
-\newenvironment{EventCard}[3]{%
+\newenvironment{EventCard}[2]{%
+  \def\ThisName{\EventBrief{#2}}%
+  \begin{BHHCard}{\ThisName}{#2}{event}{#1}{}{~}%
+}{%
+  \end{BHHCard}%
+}
+\newenvironment{EventCardSp}[3]{%
   \begin{BHHCard}{#3}{#2}{event}{#1}{}{~}%
 }{%
   \end{BHHCard}%
