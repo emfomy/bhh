@@ -8,7 +8,7 @@
 % Card
 \newsavebox{\mybox}
 \newenvironment{BHHCard}[6]{%
-  \def\bgcmd{\includegraphics[width=5.45cm]{img/#3_background.png}}%
+  \def\bgcmd{\includegraphics[width=5.45cm, angle=180, origin=c]{img/#3_background.png}}%
   \def\iconcmd{\includegraphics[height=0.5cm]{img/#3_icon.png}}%
   \def\seriescmd{\includegraphics[width=1em]{img/#4.png}}%
   \def\usagecmd{\Usage{#5}}%
