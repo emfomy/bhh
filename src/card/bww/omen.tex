@@ -1,10 +1,93 @@
 %!TEX root = ../../../card.tex
-
-\OmenName{Bloodstone}
-\OmenName{Box}
-\OmenName{Cat}
-\OmenName{Key}
-\OmenName{Letter}
-\OmenName{Photograph}
-\OmenName{Rope}
-\OmenName{Vial}
+%
+\begin{OmenCard}{bww}{Bloodstone}{}
+  \begin{CardStory}
+    深綠森林沉寂的午夜裡，\\
+    有著深紅色脈動的石頭。\\
+    人們說，你無法從石頭汲取血液，\\
+    看來他們指的不是這一顆⋯
+  \end{CardStory}
+  每回合一次，當你進行任何\Roll{Trait}前，可摩擦\ThisName{}並犧牲１級任意屬性，多擲２顆骰（至多８顆）。\smallbreak
+\end{OmenCard}%
+\linebreak[0]%
+\begin{OmenCard}{bww}{Box}{}
+  \begin{CardStory}
+    人們老是告訴你要跳脫框架思考，\\
+    但你現在該擔心的是會死在裡面⋯
+  \end{CardStory}
+  當抽到\ThisName{}時，再抽取１張道具卡放在此卡上面。\smallbreak
+  \ThisName{}內的物品不可被棄置或搶奪。當有人要搶奪這個道具，你可以棄掉\ThisName{}以避免該物品被奪走。\smallbreak
+  在你的回合中，你可將\ThisName{}內的物品棄掉，並將另一個你持有的物品放進\ThisName{}。若\ThisName{}是空的，你可以直接將一個你持有的物品放進\ThisName{}。\smallbreak
+  \ThisName{}不可被搶奪。\smallbreak
+\end{OmenCard}%
+\linebreak[0]%
+\begin{OmenCard}{bww}{Cat}{companion}
+  \begin{CardStory}
+    一般認為被貓穿越正要行徑的路線\\
+    是不幸的預兆，不過換個角度想，\\
+    也許是你穿越牠正要行徑的路線，\\
+    而牠似乎因此有點不滿。\\
+    不過現在牠正陪伴著你。
+  \end{CardStory}
+  當你進行任何\Roll{Trait}前，你可以把\ThisName{}叫出來碰碰運氣。擲１顆骰子：
+  \begin{itemize}
+    \item[1+] 擲出的結果增加２點。
+    \item[0] 擲出的結果減少２點。
+  \end{itemize}
+  \ThisName{}不可被棄置、交易、或搶奪。\smallbreak
+\end{OmenCard}%
+\linebreak[0]%
+\begin{OmenCard}{bww}{Key}{}
+  \begin{CardStory}
+    你曾經好奇的想著，要怎麼\\
+    將這屋子裡所有的門鎖都打開？\\
+    但問題是，它們為什麼\\
+    在一開始就被鎖上了呢？
+  \end{CardStory}
+  \footnotesize
+  當你要從卡牌或是房間效果上檢定以打開或拿取東西時，可以使用\ThisName{}並多擲４顆骰（至多８顆）。（像是\Room{Locked Room}、\Event{Locked Safe}、\Room{Vault}）\smallbreak
+  你可以直接進出有\TokenSq{Lock}的房間。\smallbreak
+  在你的回合開始時，若你在一扇未上鎖的門旁邊，你可以將１枚\TokenSq{Lock}放在該門上。\smallbreak
+  欲通過有\TokenSq{Lock}的門，必須進行知識檢定達 3+ 嘗試解鎖，若成功，移除標記並正常通過該門。
+\end{OmenCard}%
+\linebreak[0]%
+\begin{OmenCard}{bww}{Letter}{}
+  \begin{CardStory}
+    充滿潦草墨跡的鬼畫符。
+  \end{CardStory}
+  你可以將一個你的探險者標記交給另一名探險者。\smallbreak
+  此後，在你的回合中，你可以移動到該名探險者所在的房間裡，並將\ThisName{}棄掉，該探險者亦將你的探險者標記棄掉。\smallbreak
+\end{OmenCard}%
+\linebreak[0]%
+\begin{OmenCard}{bww}{Photograph}{}
+  \begin{CardStory}
+    當你看著這張照片時，它的景象漸漸變成這棟屋子裡的另一間房間。\\
+    大概還是這棟屋子吧⋯
+  \end{CardStory}
+  當你探索新房間時，你可以將第一張抽到的房間板塊棄掉，重新抽取新的（合乎探索規則的）房間板塊，並進行探索。\smallbreak
+\end{OmenCard}%
+\linebreak[0]%
+\begin{OmenCard}{bww}{Rope}{}
+  \begin{CardStory}
+    今天應該沒有用來吊死誰⋯吧？
+  \end{CardStory}
+  你可以從直接爬上\Room{Coal Chute}，亦可從\Room{Ballroom}爬到\Room{Gallery}。\smallbreak
+  當你經過\Room{Chasm}時，無需進行檢定。\smallbreak
+  你不會因\Room{Collapsed Room}的效果受傷，並可從它下方的房間爬上來。\smallbreak
+  當你使用升降機時，可以移動到任何的\Room{Landing}。\smallbreak
+\end{OmenCard}%
+\linebreak[0]%
+\begin{OmenCard}{bww}{Vial}{}
+  \begin{CardStory}
+    一位老瘋婆說，你該喝下那瓶閃爍著琥珀色光芒的藥水。也許這就是她會變成這副德性的原因⋯
+  \end{CardStory}
+  此後每回合一次，你可擲２顆骰嘗試喝下琥珀色藥水：
+  \begin{itemize}
+    \item[4] 這不曉得是什麼血。獲得１級力量、１級速度、１級知識，但失去２級神志。
+    \item[3] 你感到興奮。獲得１級物理屬性。
+    \item[2] 實驗失敗，沒有效果。
+    \item[1] 你做了個預知夢。受到２點精神傷害，並抽取１張道具卡。
+    \item[0] 這有毒！受到２點物理傷害。
+  \end{itemize}
+\end{OmenCard}%
+\linebreak[0]%
