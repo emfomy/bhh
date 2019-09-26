@@ -1,0 +1,35 @@
+%!TEX program = xelatex
+
+\documentclass[10pt, a4paper, twocolumn]{article}
+
+\usepackage[cm]{fullpage}
+\usepackage{enumitem}
+
+\usepackage{bhh}
+\usepackage{component/rule}
+
+\newcommand{\namepageref}[1]{p.\pageref{#1}「\nameref{#1}」章節}
+
+\setlength{\columnsep}{1cm}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.25em}
+\setlist{leftmargin=2em,font=\bfseries}
+
+\title{Betrayal at House on the Hill}
+\author{Rulebook}
+\date{}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\pagebreak
+
+\input{src/rule/intro}
+\input{src/rule/main}
+\input{src/rule/haunt}
+% \input{src/rule/win}
+% \input{src/rule/glossary}
+
+\end{document}
