@@ -1,43 +1,76 @@
 \RequirePackage{nameref}
 
 % Room
-\newcommand{\Room}[1]{〈\ref{room:#1}{}~#1〉}
-\newcommand{\RoomBrief}[1]{\ref{room:#1}{}}
+\makeatletter
+\newcommand*{\Room}{\@ifstar\@RoomStar\@RoomNoStar}
+\newcommand{\@RoomNoStar}[1]{〈\ref{room:#1}{}~#1〉}
+\newcommand{\@RoomStar}[1]{\ref{room:#1}{}}
+\makeatother
 
 % Event
-\newcommand{\Event}[1]{〈\ref{event:#1}{}~#1〉}
-\newcommand{\EventBrief}[1]{\ref{event:#1}{}}
+\makeatletter
+\newcommand*{\Event}{\@ifstar\@EventStar\@EventNoStar}
+\newcommand{\@EventNoStar}[1]{〈\ref{event:#1}{}~#1〉}
+\newcommand{\@EventStar}[1]{\ref{event:#1}{}}
+\makeatother
 
 % Item
-\newcommand{\Item}[1]{〈\ref{item:#1}{}~#1〉}
-\newcommand{\ItemBrief}[1]{\ref{item:#1}{}}
+\makeatletter
+\newcommand*{\Item}{\@ifstar\@ItemStar\@ItemNoStar}
+\newcommand{\@ItemNoStar}[1]{〈\ref{item:#1}{}~#1〉}
+\newcommand{\@ItemStar}[1]{\ref{item:#1}{}}
+\makeatother
 
 % Omen
-\newcommand{\Omen}[1]{〈\ref{omen:#1}{}~#1〉}
-\newcommand{\OmenBrief}[1]{\ref{omen:#1}{}}
+\makeatletter
+\newcommand*{\Omen}{\@ifstar\@OmenStar\@OmenNoStar}
+\newcommand{\@OmenNoStar}[1]{〈\ref{omen:#1}{}~#1〉}
+\newcommand{\@OmenStar}[1]{\ref{omen:#1}{}}
+\makeatother
 
 % Boss
-\newcommand{\Boss}[1]{〈\ref{boss:#1}{}~#1〉標記}
-\newcommand{\BossBrief}[1]{\ref{boss:#1}{}}
+\makeatletter
+\newcommand*{\Boss}{\@ifstar\@BossStar\@BossNoStar}
+\newcommand{\@BossNoStar}[1]{〈\ref{boss:#1}{}~#1〉標記}
+\newcommand{\@BossStar}[1]{\ref{boss:#1}{}}
+\makeatother
 
 % Monster
-\newcommand{\Monster}[1]{〈\ref{monster:#1}{}〉標記}
-\newcommand{\MonsterBrief}[1]{\ref{monster:#1}{}}
+\makeatletter
+\newcommand*{\Monster}{\@ifstar\@MonsterStar\@MonsterNoStar}
+\newcommand{\@MonsterNoStar}[1]{〈\ref{monster:#1}{}〉標記}
+\newcommand{\@MonsterStar}[1]{\ref{monster:#1}{}}
+\makeatother
 
 % Token
-\newcommand{\TokenSq}[1]{〈\ref{token-sq:#1}{}~#1〉方形標記}
-\newcommand{\TokenSqBrief}[1]{\ref{token-sq:#1}{}}
+\makeatletter
+\newcommand*{\TokenSq}{\@ifstar\@TokenSqStar\@TokenSqNoStar}
+\newcommand{\@TokenSqNoStar}[1]{〈\ref{token-sq:#1}{}~#1〉方形標記}
+\newcommand{\@TokenSqStar}[1]{\ref{token-sq:#1}{}}
+\makeatother
 
-\newcommand{\TokenTri}[1]{〈\ref{token-tri:#1}{}~#1〉三角標記}
-\newcommand{\TokenTriBrief}[1]{\ref{token-tri:#1}{}}
+\makeatletter
+\newcommand*{\TokenTri}{\@ifstar\@TokenTriStar\@TokenTriNoStar}
+\newcommand{\@TokenTriNoStar}[1]{〈\ref{token-tri:#1}{}~#1〉三角標記}
+\newcommand{\@TokenTriStar}[1]{\ref{token-tri:#1}{}}
+\makeatother
 
-\newcommand{\TokenPenta}[1]{〈\ref{token-penta:#1}{}~#1〉五角標記}
-\newcommand{\TokenPentaBrief}[1]{\ref{token-penta:#1}{}}
+\makeatletter
+\newcommand*{\TokenPenta}{\@ifstar\@TokenPentaStar\@TokenPentaNoStar}
+\newcommand{\@TokenPentaNoStar}[1]{〈\ref{token-penta:#1}{}~#1〉五角標記}
+\newcommand{\@TokenPentaStar}[1]{\ref{token-penta:#1}{}}
+\makeatother
 
 % Roll
-\newcommand{\Roll}[1]{\ref{roll:#1}{}檢定}
-\newcommand{\RollBrief}[1]{\ref{roll:#1}{}}
+\makeatletter
+\newcommand*{\Roll}{\@ifstar\@RollStar\@RollNoStar}
+\newcommand{\@RollNoStar}[1]{\ref{roll:#1}{}檢定}
+\newcommand{\@RollStar}[1]{\ref{roll:#1}{}}
+\makeatother
 \newcommand{\RollAny}{擲骰}
 
 % Usage
-\newcommand{\Usage}[1]{\ref{usage:#1}{}}
+\makeatletter
+\newcommand*{\Usage}{\@ifstar\@UsageStar\@UsageNoStar}
+\newcommand{\@UsageNoStar}[1]{〈\ref{usage:#1}{}~#1〉}
+\newcommand{\@UsageStar}[1]{\ref{usage:#1}{}}

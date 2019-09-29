@@ -1,4 +1,4 @@
-\RequirePackage{graphicx}
+\RequirePackage{component/image}
 
 % 10.5cm x 5.45cm
 
@@ -8,10 +8,10 @@
 % Card
 \newsavebox{\mybox}
 \newenvironment{BHHCard}[6]{%
-  \def\bgcmd{\includegraphics[width=5.45cm]{img/#3_background.png}}%
-  \def\iconcmd{\includegraphics[height=0.5cm]{img/#3_icon.png}}%
-  \def\seriescmd{\includegraphics[width=1em]{img/#4.png}}%
-  \def\usagecmd{\Usage{#5}}%
+  \def\bgcmd{\ImgBackground{#3}{5.45cm}}%
+  \def\symbolcmd{\ImgSymbol{#3}{0.5cm}}%
+  \def\seriescmd{\ImgSeries{#4}{1em}}%
+  \def\usagecmd{\Usage*{#5}}%
   \def\footercmd{#6}%
   \begin{lrbox}{\mybox}%
     \begin{minipage}[t][\dimexpr10.5cm-2\fboxsep-2\fboxrule\relax]{\dimexpr5.45cm-2\fboxsep-2\fboxrule\relax}%
@@ -25,7 +25,7 @@
 }{%
       \vfill%
       \small%
-      { \centering \iconcmd \par }%
+      { \centering \symbolcmd \par }%
       \footercmd%
     \end{minipage}%
   \end{lrbox}%
@@ -49,7 +49,7 @@
 
 % Event Card
 \newenvironment{EventCard}[2]{%
-  \def\ThisName{\EventBrief{#2}}%
+  \def\ThisName{\Event*{#2}}%
   \begin{BHHCard}{\ThisName}{#2}{event}{#1}{}{~}%
 }{%
   \end{BHHCard}%
@@ -62,7 +62,7 @@
 
 % Item Card
 \newenvironment{ItemCard}[3]{%
-  \def\ThisName{\ItemBrief{#2}}%
+  \def\ThisName{\Item*{#2}}%
   \begin{BHHCard}{\ThisName}{#2}{item}{#1}{#3}{~}%
 }{%
   \end{BHHCard}%
@@ -70,7 +70,7 @@
 
 % Omen Card
 \newenvironment{OmenCard}[3]{%
-  \def\ThisName{\OmenBrief{#2}}%
+  \def\ThisName{\Omen*{#2}}%
   \begin{BHHCard}{\ThisName}{#2}{omen}{#1}{#3}{請立即進行作祟檢定。}%
 }{%
   \end{BHHCard}%

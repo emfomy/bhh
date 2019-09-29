@@ -59,11 +59,11 @@
     裡面肯定有什麼東西躲藏著⋯
   \end{CardStory}
   放置一枚\TokenSq{Closet}在此房。\smallbreak
-  每回合一次，任何探險者皆可擲２顆骰子嘗試打開\TokenSqBrief{Closet}：
+  每回合一次，任何探險者皆可擲２顆骰子嘗試打開\TokenSq*{Closet}：
   \begin{itemize}
-    \item[4] 抽取１張道具卡。
-    \item[2-3] 抽取１張事件卡。
-    \item[0-1] 抽取１張事件卡，並移除標記。
+    \item[4] 抽取１張道具牌。
+    \item[2-3] 抽取１張事件牌。
+    \item[0-1] 抽取１張事件牌，並移除標記。
   \end{itemize}
 \end{EventCard}%
 \linebreak[0]%
@@ -103,9 +103,9 @@
     \item[1-2] 你被瓦礫活埋！受到１顆骰的物理傷害。
     \item[0] 你被瓦礫活埋！受到２顆骰的物理傷害。
   \end{itemize}
-  若被活埋，保留此卡，並無法再進行任何行動或使用物品，直到掙脫為止。\smallbreak
-  此後每回合一次，你皆可進行力量檢定達 4+ 嘗試掙脫（若成功，丟棄此卡）。其他探險者也能用此方法幫你掙脫。\smallbreak
-  若檢定三次失敗，你自動掙脫並丟棄此卡，從下回合開始正常行動。\smallbreak
+  若被活埋，保留此牌，並無法再進行任何行動或使用物品，直到掙脫為止。\smallbreak
+  此後每回合一次，你皆可進行力量檢定達 4+ 嘗試掙脫（若成功，丟棄此牌）。其他探險者也能用此方法幫你掙脫。\smallbreak
+  若檢定三次失敗，你自動掙脫並丟棄此牌，從下回合開始正常行動。\smallbreak
 \end{EventCard}%
 \linebreak[0]%
 \begin{EventCard}{bhh}{Disquieting Sounds}
@@ -118,7 +118,7 @@
   \end{CardStory}
   擲６顆骰子：
   \begin{itemize}
-    \item 若結果大於或等於已被翻出的預兆卡數量，獲得１級神志。
+    \item 若結果大於或等於已被翻出的預兆牌數量，獲得１級神志。
     \item 反之，失去１級神志。
   \end{itemize}
 \end{EventCard}%
@@ -172,9 +172,9 @@
   請立即進行力量檢定：
   \begin{itemize}
     \item[4+] 你將塵土拍落。獲得１級力量。
-    \item[0-3] 事情不太對勁！保留此卡。每當你的回合開始時，受到１顆骰的物理傷害。
+    \item[0-3] 事情不太對勁！保留此牌。每當你的回合開始時，受到１顆骰的物理傷害。
   \end{itemize}
-  若你回合結束時，停留在\Room{Balcony}、\Room{Gardens}、\Room{Graveyard}、\Room{Gymnasium}、\Room{Larder}、\Room{Patio}、\Room{Tower}，或是因道具卡而讓任一屬性升級時，丟棄此卡並回復正常。\smallbreak
+  若你回合結束時，停留在\Room{Balcony}、\Room{Gardens}、\Room{Graveyard}、\Room{Gymnasium}、\Room{Larder}、\Room{Patio}、\Room{Tower}，或是因道具牌而讓任一屬性升級時，丟棄此牌並回復正常。\smallbreak
 \end{EventCard}%
 \linebreak[0]%
 \begin{EventCard}{bhh}{Groundskeeper}
@@ -186,7 +186,7 @@
   \end{CardStory}
   請立即進行知識檢定（如果你位於\Room{Gardens}，少擲２顆）：
   \begin{itemize}
-    \item[4+] 你在泥濘中發現了某樣東西。抽取１張道具卡。
+    \item[4+] 你在泥濘中發現了某樣東西。抽取１張道具牌。
     \item[0-3] \ThisName{}再次出現，並用鏟子用力揮向你的臉！你的右方的玩家代替\ThisName{}，對你的進行力量４的攻擊。
   \end{itemize}
 \end{EventCard}%
@@ -232,8 +232,8 @@
     { \FontScript 這 \enskip 會 \enskip 有 \enskip 用 \enskip 的 }\smallbreak
     並透過鏡子遞給他一件物品⋯
 \end{CardStory}
-  若你手上沒有道具卡，則由下一位持有道具卡的玩家觸發此效果。\smallbreak
-  選擇１張你所擁有的道具卡，洗入道具牌庫中。獲得１級知識。\smallbreak
+  若你手上沒有道具牌，則由下一位持有道具牌的玩家觸發此效果。\smallbreak
+  選擇１張你所擁有的道具牌，洗入道具牌庫中。獲得１級知識。\smallbreak
 \end{EventCard}%
 \linebreak[0]%
 \begin{EventCardSp}{bhh}{\scalebox{-1}[1]{Image in the Mirror}}{\scalebox{-1}[1]{鏡中影像}}
@@ -247,7 +247,7 @@
     \scalebox{-1}[1]{ \FontScript 這 \enskip 會 \enskip 有 \enskip 用 \enskip 的 }\smallbreak
     並透過鏡子遞給你一件物品⋯
 \end{CardStory}
-  抽取１張道具卡。\smallbreak
+  抽取１張道具牌。\smallbreak
 \end{EventCardSp}%
 \linebreak[0]%
 \begin{EventCard}{bhh}{It is Meant to Be}
@@ -269,7 +269,7 @@
     約拿：「不，這只有我可以玩！」\\
     語畢，約拿抓起陀螺，猛力砸向男孩的臉。影像逐漸模糊，依然可看見小男孩倒在血泊中，而約拿卻不停地砸向男孩的臉⋯
 \end{CardStory}
-  持有\Item{Puzzle Box}的探險者，必須立即將它丟棄（送給約拿玩），並抽取１張道具卡。\smallbreak
+  持有\Item{Puzzle Box}的探險者，必須立即將它丟棄（送給約拿玩），並抽取１張道具牌。\smallbreak
   若此事發生，你獲得１級神志，否則你失去１級神志。\smallbreak
 \end{EventCard}%
 \linebreak[0]%
@@ -278,9 +278,9 @@
     你的手電筒忽然熄滅。\\
     別擔心，總會有人帶著電池的⋯
   \end{CardStory}
-  保留此卡，往後的回合你的行動步數降至１格。\smallbreak
-  直到你回合結束時，有其他探險者與你處在同一房間之中，棄掉卡片並恢復正常移動。\smallbreak
-  若你持有\Item{Candle}，或在\Room{Furnace Room}結束回合，亦可棄掉卡片。\smallbreak
+  保留此牌，往後的回合你的行動步數降至１格。\smallbreak
+  直到你回合結束時，有其他探險者與你處在同一房間之中，棄掉牌片並恢復正常移動。\smallbreak
+  若你持有\Item{Candle}，或在\Room{Furnace Room}結束回合，亦可棄掉牌片。\smallbreak
 \end{EventCard}%
 \linebreak[0]%
 \begin{EventCard}{bhh}{Locked Safe}
@@ -290,9 +290,9 @@
     當然，它肯定有某種陷阱⋯
   \end{CardStory}
   放置一枚\TokenSq{Safe}在此房。\smallbreak
-  每回合一次，任何探險者皆可進行知識檢定嘗試打開\TokenSqBrief{Safe}：
+  每回合一次，任何探險者皆可進行知識檢定嘗試打開\TokenSq*{Safe}：
   \begin{itemize}
-    \item[5+] 你成功打開了\TokenSqBrief{Safe}，抽２張道具卡，並移除標記。
+    \item[5+] 你成功打開了\TokenSq*{Safe}，抽２張道具牌，並移除標記。
     \item[2-4] 受到１顆骰的物理傷害。
     \item[0-1] 受到２顆骰的物理傷害。
   \end{itemize}
@@ -319,12 +319,12 @@
   \footnotesize
   若你位於地下，則由下一位不在地下玩家觸發此效果。\smallbreak
   放置一枚\TokenSq{Slide}在此房。\smallbreak
-  請立即進行力量檢定嘗試控制\TokenSqBrief{Slide}：
+  請立即進行力量檢定嘗試控制\TokenSq*{Slide}：
   \begin{itemize}
-    \item[5+] 你成功控制住\TokenSqBrief{Slide}。移至任意較低樓層的任意一間房間中。
-    \item[0-4] 你失控了！抽取一張地下的房間板塊（若已無未探索的地下房間，則任選一間），跌落至該處，並受到１顆骰的物理傷害。若這你不是的回合，則無須為新房間抽取事件／道具／預兆卡。
+    \item[5+] 你成功控制住\TokenSq*{Slide}。移至任意較低樓層的任意一間房間中。
+    \item[0-4] 你失控了！抽取一張地下的房間板塊（若已無未探索的地下房間，則任選一間），跌落至該處，並受到１顆骰的物理傷害。若這你不是的回合，則無須為新房間抽取事件／道具／預兆牌。
   \end{itemize}
-  此後，任何探險者皆可透過檢定嘗試使用\TokenSqBrief{Slide}，而不須花費行動步數。\smallbreak
+  此後，任何探險者皆可透過檢定嘗試使用\TokenSq*{Slide}，而不須花費行動步數。\smallbreak
 \end{EventCard}%
 \linebreak[0]%
 \begin{EventCard}{bhh}{Night View}
@@ -411,8 +411,8 @@
     \item[2-3] 任意一間地面房間中。
     \item[0-1] 任意一間地下房間中。
   \end{itemize}
-  你現在就可以使用\TokenSqBrief{Secret Passage}，就算你已耗盡行動步數亦可。\smallbreak
-  此後，任何探險者皆可以使用\TokenSqBrief{Secret Passage}，並花費１點行動步數。\smallbreak
+  你現在就可以使用\TokenSq*{Secret Passage}，就算你已耗盡行動步數亦可。\smallbreak
+  此後，任何探險者皆可以使用\TokenSq*{Secret Passage}，並花費１點行動步數。\smallbreak
 \end{EventCard}%
 \linebreak[0]%
 \begin{EventCard}{bhh}{Secret Stairs}
@@ -421,8 +421,8 @@
     你發現了一個秘密階梯⋯
   \end{CardStory}
   放置一枚\TokenSq{Secret Stairs}在此房，並放置另一枚標記於另一樓層的任意一間房間中。\smallbreak
-  你現在就可以使用\TokenSqBrief{Secret Stairs}，就算你已耗盡行動步數亦可。若你選擇現在使用階梯，到達新房間時，必須再抽取１張事件卡。\smallbreak
-  此後，任何探險者皆可以使用\TokenSqBrief{Secret Stairs}，並花費１點行動步數。\smallbreak
+  你現在就可以使用\TokenSq*{Secret Stairs}，就算你已耗盡行動步數亦可。若你選擇現在使用階梯，到達新房間時，必須再抽取１張事件牌。\smallbreak
+  此後，任何探險者皆可以使用\TokenSq*{Secret Stairs}，並花費１點行動步數。\smallbreak
 \end{EventCard}%
 \linebreak[0]%
 \begin{EventCard}{bhh}{Shrieking Wind}
@@ -458,9 +458,9 @@
     母親與孩子仍然緊緊擁抱著⋯
   \end{CardStory}
   放置一枚\TokenSq{Skeletons}在此房。\smallbreak
-  每回合一次，任何探險者皆可進行神志檢定嘗試挖掘\TokenSqBrief{Skeletons}：
+  每回合一次，任何探險者皆可進行神志檢定嘗試挖掘\TokenSq*{Skeletons}：
   \begin{itemize}
-    \item[5+] 抽取一張道具卡，並移除標記。
+    \item[5+] 抽取一張道具牌，並移除標記。
     \item[0-4] 你在附近挖掘，卻一無所獲。受到１顆骰的精神傷害。
   \end{itemize}
 \end{EventCard}%
@@ -483,7 +483,7 @@
   \end{CardStory}
   請立即進行知識檢定以找出原因：
   \begin{itemize}
-    \item[4+] 牆上的一部分滑了開來，你發現了一個壁櫥。抽取１張道具卡。
+    \item[4+] 牆上的一部分滑了開來，你發現了一個壁櫥。抽取１張道具牌。
     \item[0-3] 仍然找不出原因，使你發狂！失去１級神志。
   \end{itemize}
 \end{EventCard}%
@@ -556,7 +556,7 @@
   \end{CardStory}
   請立即進行知識檢定：
   \begin{itemize}
-    \item[4+] 你在地板下發現了什麼。抽取１張道具卡。
+    \item[4+] 你在地板下發現了什麼。抽取１張道具牌。
     \item[0-3] 你依循著聲音挖開地板，卻一無所獲。
   \end{itemize}
 \end{EventCard}%
@@ -580,9 +580,9 @@
     \item[4+] 你掙脫了，獲得１級力量。
     \item[0-3] 你被黏住了。
   \end{itemize}
-  若被黏住，保留此卡，並無法再進行任何行動或使用物品，直到掙脫為止。\smallbreak
-  此後每回合一次，你皆可進行力量檢定達 4+ 嘗試掙脫（若成功，丟棄此卡）。其他探險者也能用此方法幫你掙脫。檢定失敗的探險者，回合立即結束。\smallbreak
-  若檢定三次失敗，你自動掙脫並丟棄此卡，從下回合開始正常行動。\smallbreak
+  若被黏住，保留此牌，並無法再進行任何行動或使用物品，直到掙脫為止。\smallbreak
+  此後每回合一次，你皆可進行力量檢定達 4+ 嘗試掙脫（若成功，丟棄此牌）。其他探險者也能用此方法幫你掙脫。檢定失敗的探險者，回合立即結束。\smallbreak
+  若檢定三次失敗，你自動掙脫並丟棄此牌，從下回合開始正常行動。\smallbreak
 \end{EventCard}%
 \linebreak[0]%
 \begin{EventCard}{bhh}{What the...?}
@@ -600,6 +600,6 @@
     正要躲開時，卻被牠狠狠擊倒，\\
     只聽見一陣咯咯笑聲離你遠去⋯
   \end{CardStory}
- 請將你所有的道具卡（不包含預兆卡）覆蓋於桌面，由你右邊的玩家隨機選擇丟棄其中一張。\smallbreak
+ 請將你所有的道具牌（不包含預兆牌）覆蓋於桌面，由你右邊的玩家隨機選擇丟棄其中一張。\smallbreak
 \end{EventCard}%
 \linebreak[0]%
