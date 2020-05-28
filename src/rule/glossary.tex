@@ -1,2 +1,164 @@
 %!TEX root = ../../rule.tex
 
+\section{術語表} \label{sec:glossary}
+
+本章節定義了此規則手冊、作祟劇本、卡牌及板塊中用到的部分遊戲術語。特殊遊戲術語首次出現時將用\textbf{粗體}表示。
+
+\paragraph{〈相鄰 Adjacent〉}
+有共同邊的房間稱為相鄰房間。對角線的房間並不相鄰。
+
+\paragraph{〈攻擊 Attack〉}
+探險者（及怪物）在作祟發生前無法發動攻擊。在作祟發生後，你的每回合一次，可以對一名對手進行攻擊（\Roll{Combat}）。
+
+% Combat Roll == Attack Roll?
+\begin{itemize}
+  \item \textit{〈\Roll{Combat} Combat Roll〉}：你與一名對手同時擲等同於力量數量的骰子。擲出較高點數的一方對另一方造成等同於點差距的物理傷害（若平手，則雙方皆不受傷）。詳見\namepageref{ssec:make-an-attack}。
+  \item \textit{〈遠程攻擊 Distance Attack〉}：某些武器或劇本中的特殊道具允許你攻擊\textbf{視線}（可直視對方，p.\pageref{glossary:line-of-sight}）中位於其他房間的對手。在這個情況下，你若被擊敗也不會受傷。
+\end{itemize}
+
+\paragraph{〈卡牌 Card〉}
+遊戲中共有三種類型的卡牌：事件、道具、預兆。探險者在探索新房間時有機會抽取卡牌。當你抽到卡牌時，大聲唸出卡牌內容並且依循指示行動。
+
+\begin{itemize}
+  \item \textit{〈事件卡 Event Card〉}：事件卡上有漩渦符號\EventSymbol{}。在執行完卡牌上的指示後，棄掉該牌（除非該牌上有特殊指示或是有持續效果）。
+  \item \textit{〈道具卡 Item Card〉}：道具卡上有牛頭符號\ItemSymbol{}。將該牌面朝上放置在你面前，表示擁有該道具。道具卡皆為物品（p.\pageref{glossary:item}）。詳見\namepageref{ssec:use-item-and-omen-cards}。
+  \item \textit{〈預兆卡 Omen Card〉}：預兆卡上有渡鴉符號\OmenSymbol{}。將該牌面朝上放置在你面前，表示擁有該預兆。你可能需要立即進行些行動。在該回合結束，若作祟尚未發生，你必須執行\Roll{Haunt}。大多數預兆都是物品（p.\pageref{glossary:item}）。
+\end{itemize}
+
+\paragraph{〈角色 Character〉}
+探險者、怪物、劇本特殊對手（如\Boss*{Dracula}）皆為角色。
+
+\paragraph{〈角色卡 Character Card〉}
+遊戲中共有６張角色卡，各代表兩個角色（分別在角色卡的兩面）。每張角色卡皆記載該角色的姓名、肖像、屬性以及其他資訊。
+
+\paragraph{〈同伴 Companion〉}
+\Omen{Dog}、\Omen{Girl}、\Omen{Madman}——這幾張預兆卡屬於同伴，他們會跟隨照料（擁有）他們的探險者。同伴沒有任何屬性。
+
+\paragraph{〈傷害 Damage〉}
+
+輸掉戰鬥，以及許多卡牌、板塊、和作祟效果皆會使探險者受到傷害。傷害分為物理傷害及精神傷害。你每受到一點傷害，你的探險者皆須扣一點對應的屬性。
+
+\begin{itemize}
+  \item \textit{〈物理傷害 Physical Damage〉}：自行分配傷害至你的探險者的物理屬性——力量與速度。
+  \item \textit{〈精神傷害 Mental Damage〉}：自行分配傷害至你的探險者的精神屬性——知識與神志。
+\end{itemize}
+
+\paragraph{〈探索 Discover〉}
+當你的探險者穿過一扇尚未探索的門時，抽取一張新的房間板塊並放置於該門後，你的探險者立即進入並探索該房間。詳見\namepageref{ssec:discover-a-new-room}。
+
+\paragraph{〈擲骰檢定 Die Roll〉}
+許多卡牌、房間、及作祟劇本會要求你的探險者進行擲骰檢定達到 X+，其中 “X” 為一個數字（舉例來說，你可能需要進行一個 4+ 的知識檢定）。每回合可執行檢定的次數並沒有限制，但是你不能重複執行同一個檢定。骰子上的點數有０、１、２，擲等同於指定數量的骰子並加總擲出的點數，如果點數和大於或等於要求的條件 “X”，則檢定通過。詳見 \namepageref{ssec:attempt-a-die-roll}
+
+附註：\textbf{〈檢定 Roll〉}泛指遊戲中\textbf{〈擲骰 Roll〉}，可視為同義詞（英文即為同一個字）。
+
+\begin{itemize}
+  \item \textit{〈\Roll{Trait} Trait Roll〉}：擲等同於探險者（或怪物）其中一個屬性相同數量的骰子（使用目前的數值而非初始數值）。
+  \item \textit{〈\Roll{Task} Task Roll〉}：某些作祟劇本要求你完成指定數量個檢定（如驅邪），這種這類檢定每回合只能進行一次。
+\end{itemize}
+
+\paragraph{〈門 Door〉}
+門用來連接房間。你可以自由穿越門移動至相鄰房間。屋內的門總是開著。
+
+\begin{itemize}
+  \item \textit{\Room{Front Door}}：與其他們不同，\Room*{Front Door}（在\Room{Entrance Hall}旁）永遠鎖上。你無法離開這個屋子（除非作祟劇本有特別規定）。
+\end{itemize}
+
+\paragraph{〈探險者 Explorer〉}
+每位玩家各操控一名探險者。探險者包含叛徒與英雄。
+
+\paragraph{〈假象 False Feature〉}
+有些時候無法總完美將房門與窗戶對上，這些時候屋內會生成一些『假象』。你無法穿過假門，而假窗亦不算是扇窗。
+
+\paragraph{〈人物 Figure〉}
+每個角色卡對應到一個相同顏色的角色人物。在遊戲中該人物代表對應的探險者。
+
+\paragraph{〈作祟 Haunt〉}
+當探險者在\Roll{Haunt}失敗時，便會觸發一個作祟劇本。該劇本會描述獲勝條件、新的規則、以及怪物。在作祟發生後，探險者可能會死亡。詳見\namepageref{sec:haunt}。
+
+\begin{itemize}
+  \item \textit{〈英雄 Hero〉}：在作祟發生後，叛徒以外的探險者成為英雄，對抗屋中的危險及叛徒的陰謀，為了生存而奮鬥。
+  \item \textit{〈叛徒 Traitor〉}：在作祟發生後，其中一位探險者成為叛徒，全力對抗他原來的夥伴。有些劇本有身份隱匿的\textbf{隱藏叛徒}（詳見 \namepageref{ssec:haunts-with-a-hidden-traitor}）。
+\end{itemize}
+
+\paragraph{〈作祟檢定 Haunt Roll〉}
+在作祟開始前，若你抽到預兆牌，你必須在回合結束時進行\Roll{Haunt}。擲６顆骰子，若擲骰結果小於目前已抽出的預兆牌總數，則作祟開始。
+
+\begin{itemize}
+  \item \textit{〈作祟揭露者 Haunt Revealer〉}：上述擲骰的玩家稱為作祟揭露者。他負責查閱\emph{叛徒手冊}開頭的作祟列表，並確認發生哪個作祟劇本以及誰是叛徒。
+\end{itemize}
+
+\paragraph{〈作祟特殊行動 Haunt-Specific Action〉}
+許多作祟劇本要求探險者進行一些特殊的行動，如驅邪或摧毀物品。你可以在你的回合進行該特殊行動或特殊攻擊。
+
+\paragraph{〈物品 Item〉} \label{glossary:item}
+探險者可以攜帶並使用道具及預兆（通稱為物品）。物品可以被撿起、棄置、交易或搶奪。詳見\namepageref{ssec:use-item-and-omen-cards}。
+
+\begin{itemize}
+  \item \textit{〈物品標記 Item Token〉}：許多作祟劇本會在屋內放置些\TokenPenta{Item}，並會有特殊規則描述該如何使用。除非劇本額外敘述，否則這些物品標記可以如同道具及預兆般被撿起、棄置、交易或搶奪。
+  \item \textit{〈\Usage{Weapon} Weapon〉}：道具\Item{Axe}、\Item{Blood Dagger}、\Item{Revolver}、\Item{Sacrificial Dagger}及預兆\Omen{Spear}屬於武器。你在戰鬥中僅能使用一個武器，但你可同時攜帶多把。在戰鬥中不一定要使用武器。
+\end{itemize}
+
+\paragraph{〈視線 Line of Sight〉} \label{glossary:line-of-sight}
+如果你與對手間可以畫一條不被切斷的直線，即代表該對手在你的視線中。
+
+\paragraph{〈移動 Move〉}
+每個回合，探險者與怪物皆可以在屋內移動。每名探險者皆可移動至多等於他速度的格數（房間數）；怪物則是擲等同於祂速度的骰子，並移動至多等於擲骰結果的格數。在移動當中可以進行任意行動（如使用物品或發動攻擊）。
+
+\paragraph{〈對手 Opponent〉}
+作祟發生後，探險者或怪物的對手會妨礙他／牠的行動。叛徒（怪物）與英雄們互為對手。當一名角色要離開房間時，每位在同一個房間的對手額外消耗１點他／牠的行動點數。
+
+\paragraph{〈房間 Room〉}
+宅邸內有許多房間供你探索與移動。每個房間皆需耗１點行動點數。走廊（如\Room{Dusty Hallway}）及戶外區域（如\Room{Patio}）亦屬於房間。
+
+每個房間板塊的背面皆印著樓層：〈地面 Ground〉、〈地下 Basement〉、〈樓上 Upper〉。你可以以任何合法的方式把房間板塊放置於對應的樓層。
+
+有些房間板塊上印有規則敘述當探險者進入、離開、或執行特殊動作的效果。另外許多房間板塊上亦印有與卡牌相對應的符號，僅第一位進入該房間的探險者會觸發符號。
+
+\begin{itemize}
+  \item \textit{〈屏障房間 Barrier Room〉}：屏障房間由屏障分為兩個部分，阻礙你從一側到達另一側。\Room{Chasm}是一個例子。
+\end{itemize}
+
+\paragraph{〈牌堆 Stack〉}
+卡牌與房間板塊皆需洗勻並面朝下落成一堆（稱為牌堆）以供玩家抽取。
+
+\paragraph{〈搶奪 Steal〉}
+若你擊敗一名對手並可造成２點以上的物理傷害，你可以改為從他那邊搶奪一個可交易的物品而不造成傷害。詳見\namepageref{ssec:special-attacks}。
+
+\paragraph{〈震懾 Stunned〉}
+除非劇本額外敘述，當怪物被擊敗時並不會死。當怪物受到傷害時，牠被震懾並跳過他的下一個回合。被震懾的怪物不會妨礙牠的對手移動。
+
+\paragraph{〈符號 Symbol〉}
+每張卡牌上皆有印製一個符號。渡鴉符號\OmenSymbol{}代表預兆，牛頭符號\ItemSymbol{}代表道具，漩渦符號\EventSymbol{}代表事件。有些房間上亦有這些符號，第一位進入該房間的探險者須停止移動並抽取對應的卡牌。
+
+\paragraph{〈標記 Token〉}
+標記用來代表特殊物品或記號。
+
+\begin{itemize}
+  \item \textit{〈怪物標記 Monster Token〉}：共七個顏色，並有編號以方便區別。特殊的怪物（頭目）用較大的圓形標記表示，並印有牠的名字。
+  \item \textit{〈物品標記 Item Token〉}：五角形，亦有編號。
+  \item \textit{〈檢定標記 Trait Roll Token〉}：三角形，用以紀錄作祟中特殊檢定次數。
+  \item \textit{〈事件標記 Event Token〉／〈房間標記 Room Token〉}：方形，紀錄卡片或房間的效果，如\Event{Secret Stairs}或\Event{Mystic Slide}。
+\end{itemize}
+
+\paragraph{〈屬性 Trait〉}
+每位探險者都有四個屬性——力量、速度、知識、神志——列於角色卡四邊。每個屬性接用綠色表示其起始值。詳見\namepageref{ssec:traits}。
+
+\begin{itemize}
+  \item \textit{〈物理屬性 Physical Traits〉}：力量與速度為物理屬性。
+  \item \textit{〈精神屬性 Mental Traits〉}：知識與神志為精神屬性。
+\end{itemize}
+
+\paragraph{〈回合 Turn〉}
+在作祟開始前，玩家輪流進行回合，由生日最近的探險者為開始並依序向左順時針進行。在你的回合中，你可以移動、探索房間、使用物品、或進行檢定。在作祟開始後，你每個回合還可以發動一次攻擊。
+
+在作祟開始時，由叛徒左邊的玩家開始回合並依序向左順時針進行。每位英雄進行其英雄回合，接者叛徒進行其叛徒回合。在叛徒回合之後，叛徒操控所有怪物共同進行怪物回合。
+
+\paragraph{〈使用 Use〉}
+所有的探險者皆可使用物品（包含道具及大多預兆），少數怪物亦可以使用物品。使用物品即用它發動攻擊、擲骰檢定、或其他用到該物品的動作。對於每個物品，你每回合僅能使用一次。
+
+\paragraph{〈窗戶 Windows〉}
+除了門之外，有些房間有一至多個窗戶。你正常不能穿越窗戶，但是部分作祟劇本有基於窗戶的相關規則。\Room{Bedroom}、\Room{Grand Staircase}、\Room{Master Bedroom}、\Room{Chapel}、\Room{Dining Room}有窗戶。
+
+\begin{RuleBox}{碰到規則沒提到的事情怎麼辦？}
+  這遊戲經過好幾個小時的測試，但依然可能有些規則書及作祟劇本沒考慮到的狀況。別讓這狀況影響遊戲進行，在這種情況，與其他玩家達成協議並繼續玩下去。（如果無法決定，可以執嘗試硬幣決定。）
+\end{RuleBox}
