@@ -18,7 +18,7 @@
       ~\par%
       { \centering%
         {\FontTitle \Large #1} \par%
-        {\FontSubTitle \small \textcolor{milk-dark}{\uppercase{#2}}} \par%
+        {\FontTitleEn \small \textcolor{milk-dark}{\uppercase{#2}}} \par%
       }%
       \vspace*{0.5em}%
       \small%
@@ -71,7 +71,7 @@
 % Omen Card
 \newenvironment{OmenCard}[3]{%
   \def\ThisName{\Omen*{#2}}%
-  \begin{BHHCard}{\ThisName}{#2}{omen}{#1}{#3}{請立即進行作祟檢定。}%
+  \begin{BHHCard}{\ThisName}{#2}{omen}{#1}{#3}{請立即進行\Roll{Haunt}。}%
 }{%
   \end{BHHCard}%
 }
