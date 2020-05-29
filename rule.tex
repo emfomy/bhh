@@ -1,61 +1,12 @@
 %!TEX program = xelatex
 
-\documentclass[10pt,twoside,titlepage]{article}
-
-\usepackage[a5paper,includehead,margin=1.25cm]{geometry}
-\usepackage{indentfirst}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage{bhh}
-\usepackage{component/rule}
-\usepackage{component/image}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage{titleps}
-\newpagestyle{main}{
-  \sethead[\Large\FontTitleEn {\thepage} | {RULEBOOK}][][]
-          {}{}{{\Large\FontTitleEn {RULEBOOK} | {\thepage}}}
-}
-\pagestyle{main}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage{background}
-\usepackage{ifoddpage}
-\backgroundsetup{
-  scale=1,
-  angle=0,
-  opacity=.8,
-  contents={
-    \checkoddpage
-    \ifoddpage
-      \includegraphics[width=\paperwidth, height=\paperheight]{img/parchment_right.jpg}
-    \else
-      \includegraphics[width=\paperwidth, height=\paperheight]{img/parchment_left.jpg}
-    \fi
-  }
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newcommand{\namepageref}[1]{p.\pageref{#1}『\nameref{#1}』章節}
-\renewcommand{\thesubsection}{\thesection-\arabic{subsection}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage{enumitem}
-\setlength{\columnsep}{1cm}
-\setlength{\parindent}{2em}
-\setlength{\parskip}{0.25em}
-\setlist{leftmargin=2em,font=\bfseries}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{rule}
 
 \title{\FontTitleEn Betrayal at House on the Hill}
 \author{\FontTitleEn Rulebook}
 \date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
