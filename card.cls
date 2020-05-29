@@ -1,7 +1,22 @@
-\RequirePackage{component/image}
+% Document Class
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{card}
+\LoadClass[10pt, a4paper]{article}
+
+% Include
+\RequirePackage{include/bhh}
+
+% Layout
+\usepackage{fullpage}
+
+% Spacing
+\RequirePackage{enumitem}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\lineskip}{0pt}
+\setlist{leftmargin=2em,font=\bfseries}
 
 % 10.5cm x 5.45cm
-
 \setlength{\fboxrule}{0pt}
 \setlength{\fboxsep}{0.5cm}
 
