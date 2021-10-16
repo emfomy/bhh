@@ -1,7 +1,7 @@
 % Document Class
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{haunt}
-\LoadClass[10pt,a4paper,twocolumn]{report}
+\LoadClass[12pt,a4paper,twocolumn]{report}
 
 % Include
 \RequirePackage{include/bhh}
@@ -20,9 +20,8 @@
 
 % Title
 \RequirePackage{titlesec}
-\titlespacing{\chapter}{0pt}{0em}{4em}
-\titleformat{\chapter}[hang]
-{\centering\normalfont\huge\bfseries}{Haunt\ \thechapter}{1em}{}
+\titlespacing{\chapter}{0pt}{-2em}{2em}
+\titleformat{\chapter}[hang]{\centering\normalfont\huge\bfseries}{Haunt\ \thechapter}{1em}{}
 
 % Haunt Story
 \newenvironment{HauntStory}{%
@@ -32,4 +31,7 @@
 }
 
 % Haunt Section
-\newcommand{\HauntSection}[1]{\bigbreak\noindent\textbf{\Large#1}\smallbreak}
+\newcommand{\HauntSection}[1]{\bigbreak\noindent{\bfseries\Large#1}\smallbreak}
+
+\newcommand{\HauntMobStatusSection}[1]{\bigbreak\noindent\hfill{\bfseries\LARGE\SkullSymbol#1\SkullSymbol}\hfill\null\smallbreak}
+\newcommand{\HauntMobStatus}[1]{\noindent\hfill{\bfseries\large#1}\hfill\null\smallbreak}
