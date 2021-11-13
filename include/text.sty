@@ -31,8 +31,9 @@
 % Boss
 \makeatletter
 \newcommand*{\Boss}{\@ifstar\@BossStar\@BossNoStar}
-\newcommand{\@BossNoStar}[1]{〈\ref{boss:#1}{}~#1〉大型圓形標記}
+\newcommand{\@BossNoStar}[1]{〈\ref{boss:#1}{}~#1〉}
 \newcommand{\@BossStar}[1]{\ref{boss:#1}{}}
+\newcommand{\BossLarge}[1]{〈\ref{boss:#1}{}~#1〉大型圓形標記}
 \makeatother
 
 % Monster
