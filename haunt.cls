@@ -1,7 +1,7 @@
 % Document Class
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{haunt}
-\LoadClass[12pt,a4paper,twocolumn]{report}
+\LoadClass[11pt,a4paper,twocolumn]{report}
 
 % Include
 \RequirePackage{include/bhh}
