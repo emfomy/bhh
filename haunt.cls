@@ -31,7 +31,13 @@
 }
 
 % Haunt Section
+\makeatletter
+\newcommand\cdotfill{%%
+  \leavevmode\cleaders\hb@xt@.44em{\hss$·$\hss}\hfill\kern\z@%
+}
+\makeatother
+
 \newcommand{\HauntSection}[1]{\bigbreak\noindent{\bfseries\Large#1}\smallbreak}
 
-\newcommand{\HauntMobStatusSection}[1]{\bigbreak\noindent\hfill{\bfseries\LARGE\SkullSymbol#1\SkullSymbol}\hfill\null\smallbreak}
-\newcommand{\HauntMobStatus}[1]{\noindent\hfill{\bfseries\large#1}\hfill\null\smallbreak}
+\newcommand{\HauntMobStatusSection}[1]{\bigbreak\noindent{\bfseries\LARGE※\cdotfill#1\cdotfill※}\null\smallbreak}
+\newcommand{\HauntMobStatus}[1]{\noindent{\bfseries\hfill\large#1\hfill}\null\smallbreak}
