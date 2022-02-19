@@ -7,7 +7,7 @@
 \RequirePackage{include/bhh}
 
 % Layout
-\usepackage[a4paper,includeheadfoot,margin=1.25cm]{geometry}
+\usepackage[a4paper,margin=1.25cm]{geometry}
 \RequirePackage{indentfirst}
 \setcounter{tocdepth}{1}
 
@@ -19,9 +19,13 @@
 \setlist{leftmargin=1em,font=\bfseries}
 
 % Title
-\RequirePackage{titlesec}
-\titlespacing{\chapter}{0pt}{-2em}{2em}
-\titleformat{\chapter}[hang]{\centering\normalfont\huge\bfseries}{Haunt\ \thechapter}{1em}{}
+\RequirePackage[explicit]{titlesec}
+\titlespacing{\chapter}{0pt}{0pt}{2em}
+\titleformat{\chapter}[block]{%
+  \centering\normalfont\Huge\bfseries%
+}{%
+  \thechapter\hfill #1 \hfill\thechapter
+}{0pt}{}
 
 % Haunt Story
 \newenvironment{HauntStory}{%
@@ -32,7 +36,7 @@
 
 % Haunt Section
 \makeatletter
-\newcommand\cdotfill{%%
+\newcommand\cdotfill{%
   \leavevmode\cleaders\hb@xt@.44em{\hss$·$\hss}\hfill\kern\z@%
 }
 \makeatother
