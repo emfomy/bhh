@@ -7,7 +7,7 @@
 \RequirePackage{include/bhh}
 
 % Layout
-\usepackage[a4paper,margin=1.25cm]{geometry}
+\RequirePackage[a4paper,margin=1.25cm]{geometry}
 \RequirePackage{indentfirst}
 \setcounter{tocdepth}{1}
 
@@ -22,10 +22,23 @@
 \RequirePackage[explicit]{titlesec}
 \titlespacing{\chapter}{0pt}{0pt}{2em}
 \titleformat{\chapter}[block]{%
-  \centering\normalfont\Huge\bfseries%
-}{%
-  \thechapter\hfill #1 \hfill\thechapter
-}{0pt}{}
+  \centering\Huge\bfseries%
+}{}{0pt}{%
+  \thechapter\hfill#1\hfill\thechapter%
+}
+
+% Table
+\RequirePackage{booktabs}
+\RequirePackage{caption}
+\RequirePackage{makecell}
+\newcommand{\RoomT}[1]{\makecell{%
+  \bfseries \ref{room:#1}{} \\[-.5ex]%
+  \bfseries\small #1%
+}}
+\newcommand{\OmenT}[1]{\makecell{%
+\bfseries \ref{omen:#1}{} \\[-.5ex]%
+\bfseries\small #1%
+}}
 
 % Haunt Story
 \newenvironment{HauntStory}{%
