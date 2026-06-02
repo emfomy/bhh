@@ -1,9 +1,6 @@
-# Minimal makefile for Sphinx documentation
-#
-
-# You can set these variables from the command line.
+# Requires TeX Live 2025 (https://tug.org/texlive/)
 LATEX     = latexmk
-LATEXOPTS = -synctex=1 -interaction=nonstopmode -file-line-error -pdf
+LATEXOPTS = -g
 
 .PHONY: all clean
 
