@@ -4,7 +4,7 @@
 \LoadClass[10pt,twoside,titlepage]{article}
 
 % Include
-\RequirePackage{include/bhh}
+\RequirePackage{lib/bhh}
 
 % Layout
 \usepackage[a5paper,includehead,margin=1.25cm]{geometry}
@@ -43,6 +43,7 @@
 }
 
 % Reference
+\RequirePackage{nameref}
 \newcommand{\namepageref}[1]{p.\pageref{#1}『\nameref{#1}』章節}
 \renewcommand{\thesubsection}{\thesection-\arabic{subsection}}
 

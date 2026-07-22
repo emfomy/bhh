@@ -1,0 +1,31 @@
+\RequirePackage{xparse}
+
+% Command
+\ExplSyntaxOn
+\prop_new:N \g_gloss_dict_prop
+\NewDocumentCommand{\glossdef}{m m}{\prop_gput:Nnn \g_gloss_dict_prop {#1} {#2}}
+\NewDocumentCommand{\gloss}{m}{\prop_item:Nn \g_gloss_dict_prop {#1}}
+\ExplSyntaxOff
+
+% Room + Card
+\NewDocumentCommand{\Room}{s m}{\IfBooleanTF{#1}{\gloss{room:#2}}{〈\gloss{room:#2}~#2〉}}
+\NewDocumentCommand{\Event}{s m}{\IfBooleanTF{#1}{\gloss{event:#2}}{〈\gloss{event:#2}~#2〉}}
+\NewDocumentCommand{\Item}{s m}{\IfBooleanTF{#1}{\gloss{item:#2}}{〈\gloss{item:#2}~#2〉}}
+\NewDocumentCommand{\Omen}{s m}{\IfBooleanTF{#1}{\gloss{omen:#2}}{〈\gloss{omen:#2}~#2〉}}
+
+% Boss + Monster
+\NewDocumentCommand{\Boss}{m}{〈\gloss{monster:#1}~#1〉大型怪物標記}
+\NewDocumentCommand{\Monster}{s m}{\IfBooleanTF{#1}{\gloss{monster:#2}}{〈\gloss{monster:#2}~#2〉}}
+
+% Token
+\NewDocumentCommand{\TokenMon}{s m}{\IfBooleanTF{#1}{\gloss{token-mon:#2}}{〈\gloss{token-mon:#2}〉怪物標記}}
+\NewDocumentCommand{\TokenSq}{s m}{\IfBooleanTF{#1}{\gloss{token-sq:#2}}{〈\gloss{token-sq:#2}~#2〉方形標記}}
+\NewDocumentCommand{\TokenTri}{s m}{\IfBooleanTF{#1}{\gloss{token-tri:#2}}{〈\gloss{token-tri:#2}~#2〉三角標記}}
+\NewDocumentCommand{\TokenPenta}{s m}{\IfBooleanTF{#1}{\gloss{token-penta:#2}}{〈\gloss{token-penta:#2}~#2〉五角標記}}
+
+% Roll
+\NewDocumentCommand{\Roll}{s m}{\IfBooleanTF{#1}{\gloss{roll:#2}}{\gloss{roll:#2}檢定}}
+\newcommand{\RollAny}{擲骰}
+
+% Usage
+\NewDocumentCommand{\Usage}{s m}{\IfBooleanTF{#1}{\gloss{usage:#2}}{〈\gloss{usage:#2}~#2〉}}

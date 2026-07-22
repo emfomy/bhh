@@ -4,7 +4,7 @@
 \LoadClass[10pt, a4paper]{article}
 
 % Include
-\RequirePackage{include/bhh}
+\RequirePackage{lib/bhh}
 
 % Layout
 \usepackage{fullpage}

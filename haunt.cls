@@ -4,7 +4,7 @@
 \LoadClass[11pt,a4paper,twocolumn]{report}
 
 % Include
-\RequirePackage{include/bhh}
+\RequirePackage{lib/bhh}
 
 % Layout
 \RequirePackage[a4paper,margin=1.25cm]{geometry}
@@ -32,11 +32,11 @@
 \RequirePackage{caption}
 \RequirePackage{makecell}
 \newcommand{\RoomT}[1]{\makecell{%
-  \bfseries \ref{room:#1}{} \\[-.5ex]%
+  \bfseries \gloss{room:#1} \\[-.5ex]%
   \bfseries\small #1%
 }}
 \newcommand{\OmenT}[1]{\makecell{%
-\bfseries \ref{omen:#1}{} \\[-.5ex]%
+\bfseries \gloss{omen:#1} \\[-.5ex]%
 \bfseries\small #1%
 }}
 
