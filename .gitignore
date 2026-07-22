@@ -1,7 +1,5 @@
 # Other
-activate.fish
-tmp/*
-.tmp/*
+build
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
