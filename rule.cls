@@ -1,13 +1,13 @@
 % Document Class
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{rule}
-\LoadClass[10pt,twoside,titlepage]{article}
+\LoadClass[11pt,a4paper,twoside,titlepage]{article}
 
 % Include
 \RequirePackage{lib/bhh}
 
 % Layout
-\usepackage[a5paper,includehead,margin=1.25cm]{geometry}
+\RequirePackage[a4paper,includehead,margin=1.25cm]{geometry}
 \RequirePackage{indentfirst}
 
 % Spacing

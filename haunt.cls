@@ -18,6 +18,23 @@
 \setlength{\parskip}{0.25em}
 \setlist{leftmargin=1em,font=\bfseries}
 
+% Background
+\RequirePackage{background}
+\RequirePackage{ifoddpage}
+\backgroundsetup{
+  scale=1,
+  angle=0,
+  opacity=.8,
+  contents={
+    \checkoddpage
+    \ifoddpage
+      \includegraphics[width=\paperwidth, height=\paperheight]{img/parchment_right.jpg}
+    \else
+      \includegraphics[width=\paperwidth, height=\paperheight]{img/parchment_left.jpg}
+    \fi
+  }
+}
+
 % Title
 \RequirePackage[explicit]{titlesec}
 \titlespacing{\chapter}{0pt}{0pt}{2em}
